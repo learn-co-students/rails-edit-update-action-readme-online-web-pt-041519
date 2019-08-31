@@ -1,0 +1,15 @@
+<%# form_for: will automatically set up the url where the form will be sent.  %>
+
+<%= form_for @article do |f| %>
+  <%= f.label 'Article Title' %><br>
+  <%= f.text_field :title %><br>
+
+  <%= f.label 'Article Description' %><br>
+  <%= f.text_area :description %><br>
+
+  <%= f.submit "Submit Article" %>
+<% end %>
+
+
+<%# form_for determines @article is not a new instance of the Article class. 
+Because of this, form_for knows to automatically send to the update path. %>
